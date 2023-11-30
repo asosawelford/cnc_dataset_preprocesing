@@ -1,8 +1,9 @@
 import os
 from tqdm import tqdm
-from preprocess import preprocess_audio
+from scripts.preprocess import preprocess_audio
+from config import base
 
-base = "/home/udesa_ubuntu/fondecyt/base/"
+base = os.path.join(base, "fondecyt", "base") # Path to the base folder A1085
 diarize = False
 GPU = False
 preprocess = True
