@@ -44,8 +44,11 @@ for participante in tqdm(os.listdir(base)):
                                 # 2. Use the write() method to append content
                                 label = f"{turn.start:.1f}	{turn.end:.1f}	{speaker}\n"
                                 file.write(label)
-                except:
-                    errors.append(file)
+                except Exception as e:
+                    print("error, file not processed:", file)
+                    print("Error message:", str(e))
+                    errors.append(file, str(e))
+
     print(f"finished {participante}")
 print("errors: ", len(errors))
 with open("erorrs.txt","w", encoding="utf-8") as f:
