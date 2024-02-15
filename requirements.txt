@@ -3,3 +3,4 @@ torchaudio
 pyannote.audio
 noisereduce
 onnxruntime
+tqdm

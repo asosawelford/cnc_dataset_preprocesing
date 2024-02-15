@@ -148,7 +148,7 @@ def vad(audio_file):
     return vad_audio_file
 
 def preprocess_audio(audio_file, normalize_channel_config=False,convert_to_mono_16khz_config=True,
-                      normalize_loudness_config=True, denoise_config=True, vad_config=True):
+                      normalize_loudness_config=True, denoise_config=True, vad_config=False):
     """Audio preprocessing pipeline."""
     if normalize_channel_config:
         audio_file = normalize_channel(audio_file)
